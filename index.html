@@ -1750,6 +1750,99 @@ body.has-fullscreen .fs-nav-bar{display:flex}
   .page-hd h1{font-size:20px}
   a[href]:after{content:""}
 }
+
+/* =========================================================
+   CONSULTANT HELP DRAWER — slide-out from right
+   Talking points · Three layers · Demo flow · Full guide
+   ========================================================= */
+.btn-help{display:inline-flex;align-items:center;gap:5px;color:var(--ink-2);
+  border-color:var(--line);background:#fff;font-weight:500}
+.btn-help:hover{border-color:var(--aon-red);color:var(--aon-red);background:#fff}
+.btn-help .help-icon{display:inline-flex;align-items:center;justify-content:center;
+  width:16px;height:16px;border-radius:50%;background:var(--aon-red);color:#fff;
+  font-size:10px;font-weight:700;line-height:1;margin-right:1px}
+
+/* Backdrop */
+.help-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.28);z-index:900;
+  opacity:0;pointer-events:none;transition:opacity .18s ease}
+.help-backdrop.open{opacity:1;pointer-events:auto}
+
+/* Drawer container */
+.help-drawer{position:fixed;top:0;right:0;height:100vh;width:min(520px,42vw);
+  background:#fff;box-shadow:-8px 0 32px rgba(0,0,0,.12);z-index:901;
+  transform:translateX(105%);transition:transform .22s cubic-bezier(.4,0,.2,1);
+  display:flex;flex-direction:column;font-family:inherit}
+.help-drawer.open{transform:translateX(0)}
+
+/* Drawer header */
+.help-hd{padding:20px 24px 12px;border-bottom:1px solid var(--line);flex-shrink:0}
+.help-hd-row{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:6px}
+.help-title{font-size:18px;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+.help-close{background:transparent;border:1px solid transparent;color:var(--ink-3);
+  font-size:22px;padding:0 8px;line-height:1;border-radius:4px;cursor:pointer;font-weight:400}
+.help-close:hover{color:var(--ink);background:var(--bg-3)}
+.help-sub{font-size:11.5px;color:var(--ink-3);font-style:italic;line-height:1.4}
+
+/* Drawer tabs */
+.help-tabs{display:flex;padding:0 24px;border-bottom:1px solid var(--line);
+  background:#fff;flex-shrink:0}
+.help-tab{padding:12px 0;margin-right:22px;font-size:12.5px;color:var(--ink-3);
+  border:none;background:transparent;border-bottom:2px solid transparent;font-weight:500;
+  cursor:pointer;font-family:inherit;letter-spacing:-.005em}
+.help-tab:hover{color:var(--ink)}
+.help-tab.active{color:var(--ink);border-bottom-color:var(--aon-red);font-weight:600}
+
+/* Drawer body */
+.help-body{flex:1;overflow-y:auto;padding:20px 24px 32px;background:var(--bg-2)}
+.help-pane{display:none}
+.help-pane.active{display:block}
+
+/* Kicker + section headings inside panes */
+.help-kicker{font-size:9px;font-weight:700;color:var(--aon-red);letter-spacing:.08em;
+  text-transform:uppercase;margin-bottom:6px}
+.help-lead{font-size:11.5px;color:var(--ink-2);font-style:italic;line-height:1.5;
+  margin-bottom:18px}
+
+/* Talking-point card */
+.help-tp{background:#fff;border-left:3px solid var(--aon-red);padding:12px 14px;
+  margin-bottom:12px;border-radius:0 4px 4px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.help-tp .n{display:inline-block;color:var(--aon-red);font-weight:700;font-size:13px;
+  margin-right:4px}
+.help-tp .head{font-size:13px;color:var(--ink);font-weight:600;line-height:1.35}
+.help-tp .sup{font-size:11px;color:var(--ink-3);font-style:italic;margin-top:5px;line-height:1.5}
+
+/* Layer card */
+.help-layer{background:#fff;border:1px solid var(--line);border-radius:4px;
+  padding:12px 14px;margin-bottom:12px}
+.help-layer .lbl{font-size:9px;font-weight:700;color:var(--navy);letter-spacing:.08em;
+  text-transform:uppercase;margin-bottom:4px}
+.help-layer .name{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:8px}
+.help-layer .row{display:flex;align-items:flex-start;gap:8px;font-size:11.5px;
+  color:var(--ink-2);margin-bottom:4px;line-height:1.45}
+.help-layer .row .k{font-weight:600;color:var(--ink-3);width:70px;flex-shrink:0}
+
+/* Demo step */
+.help-step{background:#fff;border-radius:4px;padding:12px 14px;margin-bottom:10px;
+  border:1px solid var(--line)}
+.help-step .n{display:inline-block;background:var(--aon-red);color:#fff;font-size:9px;
+  font-weight:700;padding:2px 6px;border-radius:2px;letter-spacing:.06em;margin-right:8px;
+  vertical-align:middle}
+.help-step .head{display:inline;font-size:12.5px;font-weight:600;color:var(--ink)}
+.help-step .row{display:flex;gap:8px;font-size:11px;color:var(--ink-2);margin-top:6px;line-height:1.5}
+.help-step .row .k{font-weight:700;font-size:9px;letter-spacing:.08em;flex-shrink:0;
+  width:32px;padding-top:2px}
+.help-step .row.do .k{color:var(--teal,#007585)}
+.help-step .row.say .k{color:var(--aon-red)}
+.help-step .row.say .v{font-style:italic}
+
+/* Guide link pane */
+.help-guide-card{background:#fff;border:1px solid var(--line);border-radius:4px;
+  padding:20px;text-align:center}
+.help-guide-card .icon{font-size:36px;color:var(--aon-red);margin-bottom:8px}
+.help-guide-card .name{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:6px}
+.help-guide-card .path{font-size:11px;color:var(--ink-3);font-family:Consolas,monospace;
+  background:var(--bg-2);padding:6px 8px;border-radius:3px;margin:8px 0;word-break:break-all}
+.help-guide-card .desc{font-size:11.5px;color:var(--ink-2);line-height:1.5;margin-top:10px}
 </style>
 </head>
 <body>
@@ -1782,6 +1875,9 @@ body.has-fullscreen .fs-nav-bar{display:flex}
     <button class="btn btn-ghost" onclick="downloadTemplate()">Download template</button>
     <button class="btn" onclick="openUpload()">Upload data</button>
     <button class="btn" onclick="printReport()" title="Print or save as PDF">Print / PDF</button>
+    <button class="btn btn-help" onclick="toggleHelpDrawer()" title="Open the consultant Help drawer — talking points, three layers, demo flow">
+      <span class="help-icon">?</span>Help
+    </button>
     <div class="ws-session-block">
       <span class="ws-lbl">Session:</span>
       <input type="text" id="ws-session-name" class="ws-name-input" placeholder="Untitled workshop" oninput="setSessionName(this.value)"/>
@@ -8254,6 +8350,155 @@ function exportAll(){
 }
 
 init();
+
+// ==============================================================
+// CONSULTANT HELP DRAWER — talking points, three layers, demo flow
+// Content mirrors the master docx (NorthPeak_Consultant_User_Guide.docx)
+// ==============================================================
+function toggleHelpDrawer(){
+  const d = document.getElementById("help-drawer");
+  const b = document.getElementById("help-backdrop");
+  const isOpen = d.classList.contains("open");
+  if(isOpen){ d.classList.remove("open"); b.classList.remove("open"); }
+  else{ d.classList.add("open"); b.classList.add("open"); }
+}
+function setHelpTab(name, ev){
+  document.querySelectorAll(".help-tab").forEach(t => t.classList.remove("active"));
+  document.querySelectorAll(".help-pane").forEach(p => p.classList.remove("active"));
+  if(ev && ev.currentTarget) ev.currentTarget.classList.add("active");
+  const pane = document.getElementById("help-pane-"+name);
+  if(pane) pane.classList.add("active");
+}
+// ESC key closes the drawer
+document.addEventListener("keydown", e => {
+  if(e.key === "Escape"){
+    const d = document.getElementById("help-drawer");
+    if(d && d.classList.contains("open")) toggleHelpDrawer();
+  }
+});
 </script>
+
+<!-- ==============================================================
+     Consultant Help Drawer (slide-out from right)
+     Cheat-sheet companion to the full docx guide
+     ============================================================== -->
+<div id="help-backdrop" class="help-backdrop" onclick="toggleHelpDrawer()"></div>
+<aside id="help-drawer" class="help-drawer" aria-label="Consultant Help">
+
+  <div class="help-hd">
+    <div class="help-hd-row">
+      <div>
+        <div class="help-kicker">AON · CONSULTANT HELP</div>
+        <div class="help-title">Demoing NorthPeak</div>
+      </div>
+      <button class="help-close" onclick="toggleHelpDrawer()" title="Close (Esc)">×</button>
+    </div>
+    <div class="help-sub">A cheat-sheet for consultants running a client demo. The full guide is in the docx alongside this file.</div>
+  </div>
+
+  <div class="help-tabs" role="tablist">
+    <button class="help-tab active" onclick="setHelpTab('talking', event)">Talking points</button>
+    <button class="help-tab"        onclick="setHelpTab('layers',  event)">Three layers</button>
+    <button class="help-tab"        onclick="setHelpTab('flow',    event)">Demo flow</button>
+    <button class="help-tab"        onclick="setHelpTab('guide',   event)">Full guide →</button>
+  </div>
+
+  <div class="help-body">
+
+    <!-- TAB 1 — TALKING POINTS -->
+    <div id="help-pane-talking" class="help-pane active">
+      <div class="help-lead">Six one-line framings to lead with. Say the three most relevant to what the client just described — before you touch a button.</div>
+      <div class="help-tp"><span class="n">1.</span><span class="head">This is not a report — it is a working document.</span><div class="sup">Notes, actions, Fit assessments, step-in decisions all persist. The next review starts where this one ended.</div></div>
+      <div class="help-tp"><span class="n">2.</span><span class="head">Same data, three lenses — Board, CEO, Business Unit.</span><div class="sup">Board sees portfolio health and retirement risk. Group CEO sees the enterprise pipeline. BU CEO sees only their patch.</div></div>
+      <div class="help-tp"><span class="n">3.</span><span class="head">Decisions get captured live, not afterwards.</span><div class="sup">Functional Fit, Step-in cover, next-quarter development actions — captured on-screen during the review, no template afterwards.</div></div>
+      <div class="help-tp"><span class="n">4.</span><span class="head">Data + human judgment together — not either / or.</span><div class="sup">Assessment scores are visible, but Readiness and Fit are captured by line leaders in the room. The tool respects that humans have context the data doesn't.</div></div>
+      <div class="help-tp"><span class="n">5.</span><span class="head">The retirement wave is visible, not a surprise.</span><div class="sup">Every critical role shows the incumbent's succession horizon. Business-continuity risk = near-term retirement AND no Ready-Now successor.</div></div>
+      <div class="help-tp"><span class="n">6.</span><span class="head">You leave the room with commitments, not observations.</span><div class="sup">Notes and Actions captured per role and per leader. Export to Excel gives the HR committee a ready-to-sign artefact.</div></div>
+    </div>
+
+    <!-- TAB 2 — THREE LAYERS -->
+    <div id="help-pane-layers" class="help-pane">
+      <div class="help-lead">Same data, three levels of resolution. The layer a viewer starts at should match their role. Every layer links to the others.</div>
+      <div class="help-layer">
+        <div class="lbl">Layer 1</div>
+        <div class="name">Board / Enterprise view</div>
+        <div class="row"><span class="k">Audience</span><span>Board (Nom &amp; Comp), Group CEO, CHRO in portfolio-review posture.</span></div>
+        <div class="row"><span class="k">Key thing</span><span>KPI strip + family-grouped critical roles + health colouring + retirement-risk KPI.</span></div>
+        <div class="row"><span class="k">Say</span><span>“Five numbers, one screen. This is what the Board reads before making a nomination decision.”</span></div>
+      </div>
+      <div class="help-layer">
+        <div class="lbl">Layer 2</div>
+        <div class="name">CXO / BU-scoped view</div>
+        <div class="row"><span class="k">Audience</span><span>BU CEO reviewing their patch, or functional CXO across BUs.</span></div>
+        <div class="row"><span class="k">Key thing</span><span>Live capture of Functional Fit (L / M / H) and Step-in cover. Ready-Now auto-fills the step-in.</span></div>
+        <div class="row"><span class="k">Say</span><span>“Every Fit click is a decision the line leader is making in real time. The tool captures it.”</span></div>
+      </div>
+      <div class="help-layer">
+        <div class="lbl">Layer 3</div>
+        <div class="name">Individual Leader profile</div>
+        <div class="row"><span class="k">Audience</span><span>Executive coach, HRBP, or a Board member wanting depth on one person.</span></div>
+        <div class="row"><span class="k">Key thing</span><span>GLIDE trait bars across three lenses + 360 rater breakdown + ADEPT + coach summary + notes.</span></div>
+        <div class="row"><span class="k">Say</span><span>“Depth exists. Don't walk every field — point out the coach summary and move on.”</span></div>
+      </div>
+    </div>
+
+    <!-- TAB 3 — DEMO FLOW -->
+    <div id="help-pane-flow" class="help-pane">
+      <div class="help-lead">Top-down (Enterprise → BU → Leader), then forward (Scenarios → Export). 30 minutes total with room to answer questions.</div>
+      <div class="help-step">
+        <span class="n">STEP 1</span><span class="head">Open with the client problem — 5 min</span>
+        <div class="row do"><span class="k">DO</span><span class="v">Do not open the tool. Ask how their last talent review went, and what happened after.</span></div>
+        <div class="row say"><span class="k">SAY</span><span class="v">Nine times out of ten, the client will name a pain point before you do.</span></div>
+      </div>
+      <div class="help-step">
+        <span class="n">STEP 2</span><span class="head">Set the frame — 1 min</span>
+        <div class="row do"><span class="k">DO</span><span class="v">Now open the tool. Do not click. Say the three most relevant talking points.</span></div>
+        <div class="row say"><span class="k">SAY</span><span class="v">“Before I show you the mechanics, this is how to read it. Working document. Same data, three lenses. Decisions captured live.”</span></div>
+      </div>
+      <div class="help-step">
+        <span class="n">STEP 3</span><span class="head">Layer 1 — Board view — 5 min</span>
+        <div class="row do"><span class="k">DO</span><span class="v">Point at the KPI strip. Point at the retirement-risk number. Do not click into anything.</span></div>
+        <div class="row say"><span class="k">SAY</span><span class="v">“Five numbers, one screen. The red number is roles with near-term retirement AND no Ready-Now successor.”</span></div>
+      </div>
+      <div class="help-step">
+        <span class="n">STEP 4</span><span class="head">Layer 2 — CXO view — 8 min</span>
+        <div class="row do"><span class="k">DO</span><span class="v">Switch to a CXO scope. Expand a role. Click a Fit button — show readiness updates. Show a Ready-Now-cover row and a picker row side-by-side.</span></div>
+        <div class="row say"><span class="k">SAY</span><span class="v">“Every Fit click is a line-leader decision. Ready-Now auto-fills the step-in — we're not asking twice.”</span></div>
+      </div>
+      <div class="help-step">
+        <span class="n">STEP 5</span><span class="head">Layer 3 — Leader profile — 5 min</span>
+        <div class="row do"><span class="k">DO</span><span class="v">Open one profile. Scroll trait bars, 360, ADEPT. Point to coach summary and notes. Don't linger.</span></div>
+        <div class="row say"><span class="k">SAY</span><span class="v">“Retirement horizon is factual — the leader may be in the room. Coach summary is where human judgment lands.”</span></div>
+      </div>
+      <div class="help-step">
+        <span class="n">STEP 6</span><span class="head">Scenarios + Export — 5 min</span>
+        <div class="row do"><span class="k">DO</span><span class="v">Model one scenario (“if the CFO leaves tomorrow”). Show pipeline shift. Then show Excel export.</span></div>
+        <div class="row say"><span class="k">SAY</span><span class="v">“This turns talent review from backward-looking to forward-looking. Excel is the artefact the HR committee signs off.”</span></div>
+      </div>
+      <div class="help-step" style="border-color:var(--aon-red);background:#FEF2F2">
+        <span class="n" style="background:var(--ink)">CLOSE</span><span class="head">2 min · Ask one question</span>
+        <div class="row say"><span class="k">SAY</span><span class="v">“Given what you've seen, what would you want to try first at your organisation?” — Then be quiet.</span></div>
+      </div>
+    </div>
+
+    <!-- TAB 4 — FULL GUIDE -->
+    <div id="help-pane-guide" class="help-pane">
+      <div class="help-lead">This drawer is the cheat sheet. The full 15-page guide lives alongside this dashboard.</div>
+      <div class="help-guide-card">
+        <div class="icon">▤</div>
+        <div class="name">NorthPeak Talent Review — Consultant User Guide</div>
+        <div class="path">NorthPeak_Consultant_User_Guide.docx</div>
+        <div class="desc">
+          Full guide with client-problem framing, talking points, three-layer walkthrough, live-working capabilities, 30-minute demo flow, and 9 common client questions with prepared answers. Includes screenshot placeholders you can populate before printing or forwarding.
+          <br><br>
+          <b style="color:var(--ink)">To open:</b> find the file in the same folder as this dashboard. Read once before your first demo (about 20 minutes). Scan Sections 3 (talking points) and 6 (demo flow) before subsequent demos.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</aside>
+
 </body>
 </html>
