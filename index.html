@@ -1335,8 +1335,8 @@ textarea{min-height:60px;resize:vertical}
 .vm-btn{padding:5px 12px;border-radius:99px;font-size:11px;background:transparent;
   color:var(--ink-2);border:none;font-weight:500;cursor:pointer;line-height:1;transition:all .12s}
 .vm-btn.active{background:var(--ink);color:#fff}
-body.chairman-mode .hide-in-chairman{display:none!important}
-/* CXO mode — hide the Chairman-level Exec Summary tab (which includes cohort analytics) */
+body.board-mode .hide-in-board{display:none!important}
+/* CXO mode — hide the Board-level Exec Summary tab (which includes cohort analytics) */
 body.cxo-mode .tab[data-view="executive"]{display:none}
 /* Also hide the Analytics sub-tab in CXO mode (CXOs are scoped to their BU/function) */
 body.cxo-mode .exec-subnav .exec-sub-tab[data-sub="analytics"]{display:none}
@@ -1351,7 +1351,7 @@ body.cxo-mode .scope-banner{display:flex}
 .scope-banner .sb-exit{background:transparent;border:1px solid rgba(255,255,255,.3);color:#fff;
   padding:4px 12px;border-radius:4px;font-size:11px;cursor:pointer;font-family:inherit;font-weight:600}
 .scope-banner .sb-exit:hover{background:rgba(255,255,255,.15)}
-/* View-mode dropdown (Chairman / TM / CXO options) */
+/* View-mode dropdown (Board / TM / CXO options) */
 .view-mode-select{padding:6px 10px;border:1px solid var(--line);border-radius:4px;
   font-size:12px;font-family:inherit;background:#fff;color:var(--ink);
   min-width:180px;cursor:pointer;font-weight:600}
@@ -1763,8 +1763,8 @@ body.has-fullscreen .fs-nav-bar{display:flex}
   <div class="spacer"></div>
   <div class="top-actions">
     <select class="view-mode-select" id="view-mode-select" onchange="setViewMode(this.value)" style="margin-right:8px" title="Who's using the tool right now — scopes the view accordingly">
-      <optgroup label="Chairman / TM">
-        <option value="chairman" selected>Chairman</option>
+      <optgroup label="Board / TM">
+        <option value="board" selected>Board</option>
         <option value="tm">TM</option>
       </optgroup>
       <optgroup label="BU CEOs">
@@ -1829,7 +1829,7 @@ body.has-fullscreen .fs-nav-bar{display:flex}
   <span class="sb-label">Scoped to:</span>
   <span class="sb-scope" id="scope-banner-scope">—</span>
   <span class="sb-count" id="scope-banner-count">— roles · — leaders</span>
-  <button class="sb-exit" onclick="setViewMode('chairman')">Exit CXO view</button>
+  <button class="sb-exit" onclick="setViewMode('board')">Exit CXO view</button>
 </div>
 
 <main>
@@ -2534,7 +2534,7 @@ body.has-fullscreen .fs-nav-bar{display:flex}
       <div class="fw-title">Level 2 · HR committee calibration</div>
       <div class="fw-sub" style="font-size:12px;color:var(--ink-3);margin:-6px 0 8px 0">Discussion venue: Pipeline tab in TM view, drawing on the pre-reads from Level 1</div>
       <div class="fw-body">
-        <p><b>Owned by:</b> CHRO with the HR committee (CEO, Chairman, senior CXOs). TM prepares the pre-read from Level 1 captures.</p>
+        <p><b>Owned by:</b> CHRO with the HR committee (CEO, Board Chair, senior CXOs). TM prepares the pre-read from Level 1 captures.</p>
         <p><b>What gets captured:</b></p>
         <ul style="padding-left:20px;color:var(--ink-2);font-size:13px;line-height:1.6">
           <li>Final readiness horizons (Ready Now / 1yr / 2–3yr / 4+yr) — may adjust Level 1's Fit-derived readiness with committee judgement</li>
@@ -3251,7 +3251,7 @@ let STATE = {
   roleSearchQuery: "",
   succFamilyFilter: [],
   hfDimension: "family",
-  viewMode: "chairman",
+  viewMode: "board",
   cxoScope: null,   // when in CXO view, holds {type:'bu'|'family', value:'<name>'} — used by scope filtering (Step 3)
   compositionPool: "future",
   compareMode: "role",
@@ -3286,7 +3286,7 @@ function init(){
   else _showSaveIndicator("ready");
   buildFilters();
   // Default to CEO mode and Executive Summary
-  document.body.classList.add("chairman-mode");
+  document.body.classList.add("board-mode");
   renderAll();
   renderExecutive();
   updateStatus();
@@ -4122,7 +4122,7 @@ function setViewMode(mode){
   const isCXO = mode && mode.startsWith("cxo-");
   STATE.cxoScope = isCXO ? (CXO_SCOPES[mode] || null) : null;
   // Body classes signal the mode to CSS (tab hiding + scope banner visibility)
-  document.body.classList.toggle("chairman-mode", mode === "chairman");
+  document.body.classList.toggle("board-mode", mode === "board");
   document.body.classList.toggle("tm-mode",       mode === "tm");
   document.body.classList.toggle("cxo-mode",      isCXO);
   // Reflect selection in the dropdown (in case setViewMode was called programmatically)
@@ -4131,7 +4131,7 @@ function setViewMode(mode){
   // Auto-bounce off any tab that's hidden in the new mode
   const cur = document.querySelector(".tab.active");
   const currentView = cur ? cur.dataset.view : null;
-  if(mode === "chairman"){
+  if(mode === "board"){
     if(currentView === "group" || currentView === "actions") switchView("executive");
   } else if(isCXO){
     const hidden = ["executive","roles","retention","group","actions"];
@@ -4141,7 +4141,7 @@ function setViewMode(mode){
   _updateScopeBanner();
   saveState();
   // Refresh render so scope filtering applies to visible view
-  if(typeof renderExecutive === "function" && mode === "chairman") renderExecutive();
+  if(typeof renderExecutive === "function" && mode === "board") renderExecutive();
   if(typeof renderSuccession === "function") renderSuccession();
   if(typeof renderLeaderList === "function") renderLeaderList();
 }
@@ -4267,7 +4267,7 @@ function renderExecDiversity(){
 }
 // ---------- Board pack export ----------
 function generateBoardPack(){
-  // Snapshot the Chairman view content, format for print
+  // Snapshot the Board view content, format for print
   const roles = STATE.roles; const leaders = STATE.leaders;
   const rnRoles = roles.filter(r=>(r.slots||[]).some(sl=>sl.readiness===READINESS[0])).length;
   const pct = Math.round(100*rnRoles/roles.length);
@@ -4765,7 +4765,7 @@ function renderAiStrategyInsight(){
 function drillAiReadiness(){
   // In CEO mode Cohort Analysis is hidden; still switch to it since AI Readiness matrix lives there
   // Temporarily reveal the tab if needed
-  if(document.body.classList.contains("chairman-mode")){
+  if(document.body.classList.contains("board-mode")){
     // Briefly switch to TM mode so user sees the AI Readiness matrix
     setViewMode("tm");
   }
