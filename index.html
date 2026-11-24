@@ -1111,7 +1111,7 @@ main{padding:24px 32px 60px;max-width:1600px;margin:0 auto}
 .lp-sgd-item .sgd-desc{font-size:11px;color:var(--ink-3);line-height:1.45;margin-top:4px}
 .lp-sgd-item .sgd-narrative{font-size:12px;color:var(--ink-2);line-height:1.55;margin-top:8px}
 .lp-sgd-item .sgd-narrative b{color:var(--ink);font-weight:600}
-/* Compact ADEPT-15 derailer block — shown lower in the profile, alongside GLIDE / rater breakdown */
+/* Compact ADEPT-15 derailer block — shown lower in the profile, alongside LEAD / rater breakdown */
 .lp-derailer-block{background:#fff;border:1px solid var(--line);border-radius:8px;padding:18px 22px;margin-bottom:24px;
   border-left:4px solid var(--rn-r)}
 .lp-derailer-block .der-hd{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
@@ -1209,7 +1209,7 @@ main{padding:24px 32px 60px;max-width:1600px;margin:0 auto}
 .lp-coll-body{display:none;padding:0 28px 20px}
 .lp-coll.open .lp-coll-body{display:block}
 
-/* GLIDE trait rows (legacy — kept in case anything still references) */
+/* LEAD trait rows (legacy — kept in case anything still references) */
 .trait-hd{display:grid;grid-template-columns:200px 1fr 1fr;gap:12px;padding:8px 0;
   border-bottom:1px solid var(--line);font-size:10px;text-transform:uppercase;letter-spacing:.06em;
   color:var(--ink-3);font-weight:600}
@@ -1227,7 +1227,7 @@ main{padding:24px 32px 60px;max-width:1600px;margin:0 auto}
 .tr-score{font-weight:600;font-size:11px;min-width:22px;text-align:right}
 .na{color:var(--ink-4);font-size:11px;font-style:italic}
 
-/* GLIDE aggregate rows (new — 70/30 aggregate with expandable Potential + Perception) */
+/* LEAD aggregate rows (new — 70/30 aggregate with expandable Potential + Perception) */
 .gl-hd{display:grid;grid-template-columns:240px 1fr;gap:16px;padding:10px 4px;
   border-bottom:1px solid var(--line);font-size:10px;text-transform:uppercase;letter-spacing:.06em;
   color:var(--ink-3);font-weight:600;align-items:baseline}
@@ -1866,7 +1866,7 @@ body.has-fullscreen .fs-nav-bar{display:flex}
   <div class="brand">
     <span class="aon-logo">AON</span>
     <div class="brand-divider"></div>
-    <div class="brand-title">NorthPeak Talent Review<small>TRSP Programme &middot; <span style="color:var(--aon-red);font-weight:600">Talent Review Tool</span></small></div>
+    <div class="brand-title">NorthPeak Talent Review<small><span style="color:var(--aon-red);font-weight:600">Talent Review Tool</span></small></div>
   </div>
   <div class="spacer"></div>
   <div class="top-actions">
@@ -2119,7 +2119,7 @@ body.has-fullscreen .fs-nav-bar{display:flex}
       <div class="coll-hd" onclick="toggleColl(this)">
         <span class="ic">▶</span>
         <h4>Potential (PT) scores by Level</h4>
-        <span class="desc">Grouped by LA / LB / LC / LD</span>
+        <span class="desc">Grouped by L1 / L2 / L3 / L4</span>
       </div>
       <div class="coll-body">
         <div class="chart-box taller"><canvas id="chart-tt-by-level"></canvas></div>
@@ -2255,7 +2255,7 @@ body.has-fullscreen .fs-nav-bar{display:flex}
   <div class="section">
     <div class="section-hd">
       <h2>Successor Readiness Matrix</h2>
-      <span class="info-i">i<span class="tip"><b>How to read this matrix</b>Each cell shows successors placed by their <b>Functional Readiness / Fit</b> for the target role and their <b>Leadership Potential</b>. The cell colour then implies their readiness horizon.<br><br><b>Axes</b><br>· X — Leadership Potential: from Aon's GLIDE assessment (PT lens + ADEPT-15)<br>· Y — Functional Readiness / Fit: from a NorthPeak line-leader survey for each target role<br><br>Click a cell to open the leaders in it.</span></span>
+      <span class="info-i">i<span class="tip"><b>How to read this matrix</b>Each cell shows successors placed by their <b>Functional Readiness / Fit</b> for the target role and their <b>Leadership Potential</b>. The cell colour then implies their readiness horizon.<br><br><b>Axes</b><br>· X — Leadership Potential: from Aon's LEAD assessment (PT lens + ADEPT-15)<br>· Y — Functional Readiness / Fit: from a NorthPeak line-leader survey for each target role<br><br>Click a cell to open the leaders in it.</span></span>
       <div class="mini-filter" style="margin-left:auto;gap:8px">
         <span class="lbl">BU</span>
         <div id="rd-bu-filter"></div>
@@ -2485,7 +2485,7 @@ body.has-fullscreen .fs-nav-bar{display:flex}
         <p><b>What it answers:</b> For each critical role, who is the named successor pool — and how ready is each successor for that specific seat?</p>
         <p><b>The matrix:</b> A 3×3 grid plotting each successor by <b>Functional Readiness / Fit</b> for the target role and their overall <b>Leadership Potential</b>. The cell maps directly to a readiness horizon — Ready Now (0–6 mo), Ready in 1 year, Ready in 2–3 years, or Ready in 4+ years.</p>
         <p><b>What to look for:</b> Concentration of Ready-Now names (a healthy pipeline); over-concentration in Ready-in-2-3-years signals long-runway development needed at scale.</p>
-        <div class="fw-northpeak"><span class="fw-northpeak-lbl">NorthPeak context</span> Functional Fit is sourced from a NorthPeak line-leader survey (leaders in or close to each target role); Leadership Potential comes from Aon's GLIDE assessment. High Functional Fit alone isn't enough for scale-up roles like BU CEO — high Leadership Potential is what enables growth.</div>
+        <div class="fw-northpeak"><span class="fw-northpeak-lbl">NorthPeak context</span> Functional Fit is sourced from a NorthPeak line-leader survey (leaders in or close to each target role); Leadership Potential comes from Aon's LEAD assessment. High Functional Fit alone isn't enough for scale-up roles like BU CEO — high Leadership Potential is what enables growth.</div>
       </div>
     </div>
 
@@ -2509,7 +2509,7 @@ body.has-fullscreen .fs-nav-bar{display:flex}
   <div class="fw-grid">
     <div class="fw-card">
       <div class="fw-icon" style="background:linear-gradient(135deg,#001F3D,#0F2A4D)">GL</div>
-      <div class="fw-title">GLIDE — Aon's 3-lens view</div>
+      <div class="fw-title">LEAD — Aon's 3-lens view</div>
       <div class="fw-sub" style="font-size:12px;color:var(--ink-3);margin:-6px 0 8px 0">Feeds all three primary frameworks</div>
       <div class="fw-body">
         <p><b>What it is:</b> Aon's proprietary framework combining three lenses on a leader:</p>
@@ -2525,10 +2525,10 @@ body.has-fullscreen .fs-nav-bar{display:flex}
     <div class="fw-card">
       <div class="fw-icon" style="background:linear-gradient(135deg,#F5A45A,#E68C4E)">A15</div>
       <div class="fw-title">ADEPT-15 — Personality dimensions</div>
-      <div class="fw-sub" style="font-size:12px;color:var(--ink-3);margin:-6px 0 8px 0">An input into GLIDE's Personality lens</div>
+      <div class="fw-sub" style="font-size:12px;color:var(--ink-3);margin:-6px 0 8px 0">An input into LEAD's Personality lens</div>
       <div class="fw-body">
         <p><b>What it is:</b> Aon's 15-dimension personality assessment measuring stable behavioural preferences across three domains — Adjustment (how you handle emotion), Ambition (how you drive), and Sociability (how you engage others).</p>
-        <p><b>How it feeds:</b> Anchors the Personality lens of GLIDE, which then flows into all three primary frameworks. Cohort-level tilts on specific dimensions surface culture-level signals in Cohort Analysis.</p>
+        <p><b>How it feeds:</b> Anchors the Personality lens of LEAD, which then flows into all three primary frameworks. Cohort-level tilts on specific dimensions surface culture-level signals in Cohort Analysis.</p>
       </div>
     </div>
   </div>
@@ -2667,7 +2667,7 @@ body.has-fullscreen .fs-nav-bar{display:flex}
     <div class="fw-term"><div class="ft-name">Ready in 2–3 years</div><div class="ft-def">Requires structured development plus a significant role or scope change</div></div>
     <div class="fw-term"><div class="ft-name">Ready in 4+ years</div><div class="ft-def">Long-runway development — new mental model or multiple passage changes needed</div></div>
     <div class="fw-term"><div class="ft-name">Tier 1 / 2 / 3</div><div class="ft-def">Role criticality — Tier 1 = enterprise-critical (Group CEO, CFO, BU CEOs), Tier 2 = BU/function-critical, Tier 3 = specialist-critical</div></div>
-    <div class="fw-term"><div class="ft-name">LA / LB / LC / LD</div><div class="ft-def">NorthPeak's career levels — LA = C-suite (Group CEO, BU CEOs), LB = SVP, LC = VP, LD = Senior Manager</div></div>
+    <div class="fw-term"><div class="ft-name">L1 / L2 / L3 / L4</div><div class="ft-def">NorthPeak's career levels — L1 = C-suite (Group CEO, BU CEOs), L2 = SVP, L3 = VP, L4 = Senior Manager</div></div>
     <div class="fw-term"><div class="ft-name">Healthy Pipeline</div><div class="ft-def">Named Ready-Now successor <b>and</b> depth of at least 2 named successors</div></div>
     <div class="fw-term"><div class="ft-name">Watch Pipeline</div><div class="ft-def">Has a Ready-Now successor but only 1 name, or best successor is Ready-in-1-year</div></div>
     <div class="fw-term"><div class="ft-name">At Risk Pipeline</div><div class="ft-def">Best successor is Ready-in-2-3-years — no near-term coverage</div></div>
@@ -2725,7 +2725,7 @@ body.has-fullscreen .fs-nav-bar{display:flex}
   <div class="modal">
     <div class="modal-hd"><h2>Upload leader data</h2><button class="modal-close" onclick="closeUpload()">×</button></div>
     <div class="modal-body">
-      <p class="muted">Excel file with the NorthPeak-GLIDE schema. Drop or click to browse.</p>
+      <p class="muted">Excel file with the NorthPeak-LEAD schema. Drop or click to browse.</p>
       <div class="drop-zone" id="drop-zone" onclick="document.getElementById('file-input').click()">
         <strong>Drop .xlsx here or click to browse</strong>
         <span>Uses columns from the Aon template</span>
@@ -2771,8 +2771,8 @@ body.has-fullscreen .fs-nav-bar{display:flex}
 
 const BUs = ["NorthPeak Auto Components","NorthPeak Industrial Systems","NorthPeak Consumer Durables","NorthPeak International","NorthPeak Innovation Labs","NorthPeak Ventures","NorthPeak Corporate"];
 const FUNCTIONS = ["Operations","Finance","Commercial","Strategy","HR","Technology","Legal","Safety"];
-const COUNTRIES = ["India","Philippines","Greece","Indonesia","Vietnam"];
-const LEVELS = ["LA","LB","LC","LD"];
+const COUNTRIES = ["India","Mexico","Czech Republic","Vietnam"];
+const LEVELS = ["L1","L2","L3","L4"];
 const TRAITS = [
   "Transformative Execution","People Leadership","Collaborative Leadership","Resilience","Adaptability",
   "Entrepreneurial","Learning Agility","Cultural Synergy","Trust & Loyalty","Energy & Tenacity"
@@ -2824,122 +2824,122 @@ const FAMILY_COLORS = {
 // Role definitions: [title, tier, cl, bu]
 const ROLE_DEFS = {
   "Enterprise Executive":[
-    ["Group CEO",1,"LA","NorthPeak Corporate"],
-    ["Group CFO",1,"LA","NorthPeak Corporate"],
-    ["CHRO",1,"LA","NorthPeak Corporate"],
-    ["CEO — NorthPeak Auto Components",1,"LA","NorthPeak Auto Components"],
-    ["CEO — NorthPeak Industrial Systems",1,"LA","NorthPeak Industrial Systems"],
-    ["CEO — NorthPeak Consumer Durables",1,"LA","NorthPeak Consumer Durables"]
+    ["Group CEO",1,"L1","NorthPeak Corporate"],
+    ["Group CFO",1,"L1","NorthPeak Corporate"],
+    ["CHRO",1,"L1","NorthPeak Corporate"],
+    ["CEO — NorthPeak Auto Components",1,"L1","NorthPeak Auto Components"],
+    ["CEO — NorthPeak Industrial Systems",1,"L1","NorthPeak Industrial Systems"],
+    ["CEO — NorthPeak Consumer Durables",1,"L1","NorthPeak Consumer Durables"]
   ],
   "Operations":[
-    ["COO — NorthPeak Auto Components",1,"LA","NorthPeak Auto Components"],
-    ["COO — NorthPeak Industrial Systems",1,"LA","NorthPeak Industrial Systems"],
-    ["COO — NorthPeak Consumer Durables",2,"LB","NorthPeak Consumer Durables"],
-    ["Head — Plant Operations (Delhi)",2,"LB","NorthPeak Auto Components"],
-    ["Head — Plant Operations (Chennai)",2,"LB","NorthPeak Auto Components"],
-    ["Head — Plant Operations (Pune)",2,"LB","NorthPeak Auto Components"],
-    ["MD — Cebu Plant (Philippines)",2,"LB","NorthPeak Auto Components"],
-    ["MD — Wroclaw Plant (Poland)",2,"LB","NorthPeak Auto Components"],
-    ["MD — Medan Plant (Indonesia)",3,"LC","NorthPeak Auto Components"],
-    ["Head — Logistics Operations",2,"LB","NorthPeak Auto Components"],
-    ["Head — Ground Handling",2,"LB","NorthPeak Auto Components"],
-    ["Head — Terminal Ops (T1)",3,"LC","NorthPeak Auto Components"],
-    ["Head — Terminal Ops (T3)",3,"LC","NorthPeak Auto Components"],
-    ["Head — Power Generation",2,"LB","NorthPeak Industrial Systems"],
-    ["Head — Renewables Operations",2,"LB","NorthPeak Industrial Systems"],
-    ["Head — Coal Operations",3,"LC","NorthPeak Industrial Systems"],
-    ["Head — Distribution Operations (North)",3,"LC","NorthPeak Consumer Durables"],
-    ["Head — Distribution Operations (South)",3,"LC","NorthPeak Consumer Durables"],
-    ["Head — Component Supply Services",3,"LC","NorthPeak Auto Components"],
-    ["Head — Retail Distribution Ops",3,"LC","NorthPeak Auto Components"],
-    ["Head — Facilities & Estate Mgmt",3,"LC","NorthPeak Corporate"],
-    ["Head — Operational Excellence",2,"LB","NorthPeak Corporate"]
+    ["COO — NorthPeak Auto Components",1,"L1","NorthPeak Auto Components"],
+    ["COO — NorthPeak Industrial Systems",1,"L1","NorthPeak Industrial Systems"],
+    ["COO — NorthPeak Consumer Durables",2,"L2","NorthPeak Consumer Durables"],
+    ["Head — Plant Operations (Delhi)",2,"L2","NorthPeak Auto Components"],
+    ["Head — Plant Operations (Chennai)",2,"L2","NorthPeak Auto Components"],
+    ["Head — Plant Operations (Pune)",2,"L2","NorthPeak Auto Components"],
+    ["MD — Monterrey Plant (Mexico)",2,"L2","NorthPeak Auto Components"],
+    ["MD — Brno Plant (Czech Republic)",2,"L2","NorthPeak Auto Components"],
+    ["MD — Hanoi Plant (Vietnam)",3,"L3","NorthPeak Auto Components"],
+    ["Head — Logistics Operations",2,"L2","NorthPeak Auto Components"],
+    ["Head — Ground Handling",2,"L2","NorthPeak Auto Components"],
+    ["Head — Terminal Ops (T1)",3,"L3","NorthPeak Auto Components"],
+    ["Head — Terminal Ops (T3)",3,"L3","NorthPeak Auto Components"],
+    ["Head — Power Generation",2,"L2","NorthPeak Industrial Systems"],
+    ["Head — Renewables Operations",2,"L2","NorthPeak Industrial Systems"],
+    ["Head — Coal Operations",3,"L3","NorthPeak Industrial Systems"],
+    ["Head — Distribution Operations (North)",3,"L3","NorthPeak Consumer Durables"],
+    ["Head — Distribution Operations (South)",3,"L3","NorthPeak Consumer Durables"],
+    ["Head — Component Supply Services",3,"L3","NorthPeak Auto Components"],
+    ["Head — Retail Distribution Ops",3,"L3","NorthPeak Auto Components"],
+    ["Head — Facilities & Estate Mgmt",3,"L3","NorthPeak Corporate"],
+    ["Head — Operational Excellence",2,"L2","NorthPeak Corporate"]
   ],
   "Finance":[
-    ["CFO — NorthPeak Auto Components",1,"LA","NorthPeak Auto Components"],
-    ["CFO — NorthPeak Industrial Systems",1,"LA","NorthPeak Industrial Systems"],
-    ["CFO — NorthPeak Consumer Durables",2,"LB","NorthPeak Consumer Durables"],
-    ["Group Controller",2,"LB","NorthPeak Corporate"],
-    ["Head — Treasury",2,"LB","NorthPeak Corporate"],
-    ["Head — M&A / Corporate Finance",2,"LB","NorthPeak Corporate"],
-    ["Head — Investor Relations",2,"LB","NorthPeak Corporate"],
-    ["Head — FP&A",2,"LB","NorthPeak Corporate"],
-    ["Head — Taxation",2,"LB","NorthPeak Corporate"],
-    ["Head — Internal Audit",2,"LB","NorthPeak Corporate"],
-    ["Head — Group Accounting",3,"LC","NorthPeak Corporate"],
-    ["Head — Business Finance (Manufacturing)",3,"LC","NorthPeak Auto Components"],
-    ["Head — Business Finance (Energy)",3,"LC","NorthPeak Industrial Systems"],
-    ["CFO — Cebu",3,"LC","NorthPeak Auto Components"],
-    ["CFO — Crete",3,"LC","NorthPeak Auto Components"]
+    ["CFO — NorthPeak Auto Components",1,"L1","NorthPeak Auto Components"],
+    ["CFO — NorthPeak Industrial Systems",1,"L1","NorthPeak Industrial Systems"],
+    ["CFO — NorthPeak Consumer Durables",2,"L2","NorthPeak Consumer Durables"],
+    ["Group Controller",2,"L2","NorthPeak Corporate"],
+    ["Head — Treasury",2,"L2","NorthPeak Corporate"],
+    ["Head — M&A / Corporate Finance",2,"L2","NorthPeak Corporate"],
+    ["Head — Investor Relations",2,"L2","NorthPeak Corporate"],
+    ["Head — FP&A",2,"L2","NorthPeak Corporate"],
+    ["Head — Taxation",2,"L2","NorthPeak Corporate"],
+    ["Head — Internal Audit",2,"L2","NorthPeak Corporate"],
+    ["Head — Group Accounting",3,"L3","NorthPeak Corporate"],
+    ["Head — Business Finance (Manufacturing)",3,"L3","NorthPeak Auto Components"],
+    ["Head — Business Finance (Energy)",3,"L3","NorthPeak Industrial Systems"],
+    ["CFO — Monterrey",3,"L3","NorthPeak Auto Components"],
+    ["CFO — Brno",3,"L3","NorthPeak Auto Components"]
   ],
   "Commercial & Growth":[
-    ["Chief Commercial Officer — Manufacturing",1,"LA","NorthPeak Auto Components"],
-    ["Chief Commercial Officer — Energy",2,"LB","NorthPeak Industrial Systems"],
-    ["Head — Core Product Business",2,"LB","NorthPeak Auto Components"],
-    ["Head — Aftermarket Business",2,"LB","NorthPeak Auto Components"],
-    ["Head — Retail Distribution",2,"LB","NorthPeak Auto Components"],
-    ["Head — Duty Free",3,"LC","NorthPeak Auto Components"],
-    ["Head — Business Development (Manufacturing)",2,"LB","NorthPeak Auto Components"],
-    ["Head — Business Development (Energy)",2,"LB","NorthPeak Industrial Systems"],
-    ["Head — Business Development (Distribution)",3,"LC","NorthPeak Consumer Durables"],
-    ["Head — Power Trading",2,"LB","NorthPeak Industrial Systems"],
-    ["Head — Sales & Marketing (Logistics)",3,"LC","NorthPeak Auto Components"],
-    ["Head — Customer Experience",3,"LC","NorthPeak Auto Components"]
+    ["Chief Commercial Officer — Manufacturing",1,"L1","NorthPeak Auto Components"],
+    ["Chief Commercial Officer — Energy",2,"L2","NorthPeak Industrial Systems"],
+    ["Head — Core Product Business",2,"L2","NorthPeak Auto Components"],
+    ["Head — Aftermarket Business",2,"L2","NorthPeak Auto Components"],
+    ["Head — Retail Distribution",2,"L2","NorthPeak Auto Components"],
+    ["Head — Duty Free",3,"L3","NorthPeak Auto Components"],
+    ["Head — Business Development (Manufacturing)",2,"L2","NorthPeak Auto Components"],
+    ["Head — Business Development (Energy)",2,"L2","NorthPeak Industrial Systems"],
+    ["Head — Business Development (Distribution)",3,"L3","NorthPeak Consumer Durables"],
+    ["Head — Power Trading",2,"L2","NorthPeak Industrial Systems"],
+    ["Head — Sales & Marketing (Logistics)",3,"L3","NorthPeak Auto Components"],
+    ["Head — Customer Experience",3,"L3","NorthPeak Auto Components"]
   ],
   "Digital & Tech":[
-    ["Chief Digital Officer",1,"LA","NorthPeak Corporate"],
-    ["Chief Technology Officer",1,"LA","NorthPeak Corporate"],
-    ["Head — AI & Analytics",2,"LB","NorthPeak Corporate"],
-    ["Head — Data & Insights",2,"LB","NorthPeak Corporate"],
-    ["Head — Cybersecurity",2,"LB","NorthPeak Corporate"],
-    ["Head — Cloud & Infrastructure",2,"LB","NorthPeak Corporate"],
-    ["Head — Digital Products (Manufacturing)",2,"LB","NorthPeak Auto Components"],
-    ["Head — Digital Products (Energy)",3,"LC","NorthPeak Industrial Systems"],
-    ["Head — Manufacturing Technology",2,"LB","NorthPeak Auto Components"],
-    ["Head — Energy Tech / Grid Systems",2,"LB","NorthPeak Industrial Systems"],
-    ["Head — Enterprise Applications",3,"LC","NorthPeak Corporate"],
-    ["Head — Innovation",3,"LC","NorthPeak Corporate"],
-    ["Head — Digital Workplace",3,"LC","NorthPeak Corporate"],
-    ["Head — Automation & RPA",3,"LC","NorthPeak Corporate"],
-    ["Head — Customer Experience Tech",3,"LC","NorthPeak Auto Components"]
+    ["Chief Digital Officer",1,"L1","NorthPeak Corporate"],
+    ["Chief Technology Officer",1,"L1","NorthPeak Corporate"],
+    ["Head — AI & Analytics",2,"L2","NorthPeak Corporate"],
+    ["Head — Data & Insights",2,"L2","NorthPeak Corporate"],
+    ["Head — Cybersecurity",2,"L2","NorthPeak Corporate"],
+    ["Head — Cloud & Infrastructure",2,"L2","NorthPeak Corporate"],
+    ["Head — Digital Products (Manufacturing)",2,"L2","NorthPeak Auto Components"],
+    ["Head — Digital Products (Energy)",3,"L3","NorthPeak Industrial Systems"],
+    ["Head — Manufacturing Technology",2,"L2","NorthPeak Auto Components"],
+    ["Head — Energy Tech / Grid Systems",2,"L2","NorthPeak Industrial Systems"],
+    ["Head — Enterprise Applications",3,"L3","NorthPeak Corporate"],
+    ["Head — Innovation",3,"L3","NorthPeak Corporate"],
+    ["Head — Digital Workplace",3,"L3","NorthPeak Corporate"],
+    ["Head — Automation & RPA",3,"L3","NorthPeak Corporate"],
+    ["Head — Customer Experience Tech",3,"L3","NorthPeak Auto Components"]
   ],
   "HR & Talent":[
-    ["CHRO — NorthPeak Auto Components",1,"LA","NorthPeak Auto Components"],
-    ["CHRO — NorthPeak Industrial Systems",2,"LB","NorthPeak Industrial Systems"],
-    ["Head — Talent Management",2,"LB","NorthPeak Corporate"],
-    ["Head — Talent Acquisition",2,"LB","NorthPeak Corporate"],
-    ["Head — Learning & Development",2,"LB","NorthPeak Corporate"],
-    ["Head — Rewards & Recognition",2,"LB","NorthPeak Corporate"],
-    ["Head — Employee Relations",3,"LC","NorthPeak Corporate"],
-    ["Head — OD & Culture",2,"LB","NorthPeak Corporate"],
-    ["Head — HR Operations",3,"LC","NorthPeak Corporate"],
-    ["Head — HR Analytics",3,"LC","NorthPeak Corporate"]
+    ["CHRO — NorthPeak Auto Components",1,"L1","NorthPeak Auto Components"],
+    ["CHRO — NorthPeak Industrial Systems",2,"L2","NorthPeak Industrial Systems"],
+    ["Head — Talent Management",2,"L2","NorthPeak Corporate"],
+    ["Head — Talent Acquisition",2,"L2","NorthPeak Corporate"],
+    ["Head — Learning & Development",2,"L2","NorthPeak Corporate"],
+    ["Head — Rewards & Recognition",2,"L2","NorthPeak Corporate"],
+    ["Head — Employee Relations",3,"L3","NorthPeak Corporate"],
+    ["Head — OD & Culture",2,"L2","NorthPeak Corporate"],
+    ["Head — HR Operations",3,"L3","NorthPeak Corporate"],
+    ["Head — HR Analytics",3,"L3","NorthPeak Corporate"]
   ],
   "Legal, Risk & Compliance":[
-    ["General Counsel",1,"LA","NorthPeak Corporate"],
-    ["Head — Corporate Legal",2,"LB","NorthPeak Corporate"],
-    ["Head — Regulatory Affairs",2,"LB","NorthPeak Corporate"],
-    ["Head — Contracts & Long-term Agreements",2,"LB","NorthPeak Corporate"],
-    ["Head — Compliance",2,"LB","NorthPeak Corporate"],
-    ["Head — Enterprise Risk",2,"LB","NorthPeak Corporate"],
-    ["Head — Litigation",3,"LC","NorthPeak Corporate"],
-    ["Head — M&A Legal",3,"LC","NorthPeak Corporate"]
+    ["General Counsel",1,"L1","NorthPeak Corporate"],
+    ["Head — Corporate Legal",2,"L2","NorthPeak Corporate"],
+    ["Head — Regulatory Affairs",2,"L2","NorthPeak Corporate"],
+    ["Head — Contracts & Long-term Agreements",2,"L2","NorthPeak Corporate"],
+    ["Head — Compliance",2,"L2","NorthPeak Corporate"],
+    ["Head — Enterprise Risk",2,"L2","NorthPeak Corporate"],
+    ["Head — Litigation",3,"L3","NorthPeak Corporate"],
+    ["Head — M&A Legal",3,"L3","NorthPeak Corporate"]
   ],
   "Strategy & Corporate Dev":[
-    ["Head — Group Strategy",1,"LA","NorthPeak Corporate"],
-    ["Head — Corporate Development",2,"LB","NorthPeak Corporate"],
-    ["Head — New Business & Ventures",2,"LB","NorthPeak Corporate"],
-    ["Head — Government Relations",2,"LB","NorthPeak Corporate"],
-    ["Head — Global Expansion",2,"LB","NorthPeak Corporate"],
-    ["Head — Sustainability & ESG",2,"LB","NorthPeak Corporate"],
-    ["Head — Portfolio Management",3,"LC","NorthPeak Corporate"]
+    ["Head — Group Strategy",1,"L1","NorthPeak Corporate"],
+    ["Head — Corporate Development",2,"L2","NorthPeak Corporate"],
+    ["Head — New Business & Ventures",2,"L2","NorthPeak Corporate"],
+    ["Head — Government Relations",2,"L2","NorthPeak Corporate"],
+    ["Head — Global Expansion",2,"L2","NorthPeak Corporate"],
+    ["Head — Sustainability & ESG",2,"L2","NorthPeak Corporate"],
+    ["Head — Portfolio Management",3,"L3","NorthPeak Corporate"]
   ],
   "Safety, Quality & Sustainability":[
-    ["Head — Product Safety & Compliance",2,"LB","NorthPeak Auto Components"],
-    ["Head — Occupational Health & Safety",3,"LC","NorthPeak Corporate"],
-    ["Head — Environmental & Climate",2,"LB","NorthPeak Corporate"],
-    ["Head — Quality Assurance",3,"LC","NorthPeak Corporate"],
-    ["Head — Fire Safety & Emergency",3,"LC","NorthPeak Corporate"]
+    ["Head — Product Safety & Compliance",2,"L2","NorthPeak Auto Components"],
+    ["Head — Occupational Health & Safety",3,"L3","NorthPeak Corporate"],
+    ["Head — Environmental & Climate",2,"L2","NorthPeak Corporate"],
+    ["Head — Quality Assurance",3,"L3","NorthPeak Corporate"],
+    ["Head — Fire Safety & Emergency",3,"L3","NorthPeak Corporate"]
   ]
 };
 
@@ -2996,7 +2996,7 @@ const TRAIT_STRATEGIC_ANCHOR = {
   "Adaptability":             "Responding to energy transition + policy shifts + market volatility",
   "Entrepreneurial":          "New business creation — international manufacturing, sustainable products, digital",
   "Learning Agility":         "AI / digital transformation of operations; new capability adoption",
-  "Cultural Synergy":         "International expansion — Cebu, Crete, Medan; multi-culture team-leading",
+  "Cultural Synergy":         "International expansion — Monterrey, Brno, Hanoi; multi-culture team-leading",
   "Trust & Loyalty":          "Government / regulator relationships; family business governance",
   "Energy & Tenacity":        "Long-gestation capital investments; multi-decade contracts"
 };
@@ -3079,7 +3079,7 @@ function initials(name){ return name.split(" ").map(w=>w[0]).slice(0,2).join("")
 
 function generateDemo(){
   const leaders = [];
-  const levelDist = ["LA","LA","LA","LA","LA","LA","LA","LA","LA","LA","LB","LB","LB","LB","LB","LB","LB","LB","LC","LC","LC","LC","LC","LC","LD","LD","LD","LD","LD","LD"];
+  const levelDist = ["L1","L1","L1","L1","L1","L1","L1","L1","L1","L1","L2","L2","L2","L2","L2","L2","L2","L2","L3","L3","L3","L3","L3","L3","L4","L4","L4","L4","L4","L4"];
   const buDist = ["NorthPeak Auto Components","NorthPeak Auto Components","NorthPeak Auto Components","NorthPeak Auto Components","NorthPeak Auto Components","NorthPeak Industrial Systems","NorthPeak Industrial Systems","NorthPeak Industrial Systems","NorthPeak Consumer Durables","NorthPeak Corporate","NorthPeak International","NorthPeak Innovation Labs","NorthPeak Ventures"];
   const zonesDist = [[0,1],[0,2],[0,2],[1,0],[1,1],[1,1],[1,1],[1,2],[1,2],[2,0],[2,1],[2,2],[0,0]];
   // Bias by trait — some traits systematically stronger/weaker for NorthPeak cohort feel
@@ -3163,9 +3163,9 @@ function generateDemo(){
     const ageRoll = seeded(seed+70);
     // Age distribution weighted to reflect Indian conglomerate leadership demographic
     // ~55% Gen X, ~40% Millennial, ~5% Gen Z, plus a few Boomers at very senior levels
-    const age = level==="LA" ? Math.floor(48 + seeded(seed+71)*14)
-              : level==="LB" ? Math.floor(42 + seeded(seed+71)*12)
-              : level==="LC" ? Math.floor(36 + seeded(seed+71)*10)
+    const age = level==="L1" ? Math.floor(48 + seeded(seed+71)*14)
+              : level==="L2" ? Math.floor(42 + seeded(seed+71)*12)
+              : level==="L3" ? Math.floor(36 + seeded(seed+71)*10)
               : Math.floor(30 + seeded(seed+71)*8);
     const generation = age>=60 ? "Boomer" : age>=45 ? "Gen X" : age>=29 ? "Millennial" : "Gen Z";
     const originBU = buDist[(i*7) % buDist.length]; // Where they built their career
@@ -3177,7 +3177,7 @@ function generateDemo(){
     leaders.push({
       id: "L"+String(i+1).padStart(3,"0"),
       name,
-      role: [level==="LA"?"CEO":level==="LB"?"SVP":level==="LC"?"VP":"Senior Manager",func,"—",bu.replace("NorthPeak ","")].join(" "),
+      role: [level==="L1"?"CEO":level==="L2"?"SVP":level==="L3"?"VP":"Senior Manager",func,"—",bu.replace("NorthPeak ","")].join(" "),
       bu, level, country, gender, function: func,
       tenure: Math.floor(seeded(seed+43)*15)+2,
       manager: NAMES[(i+3)%NAMES.length],
@@ -3195,7 +3195,7 @@ function generateDemo(){
         const roll = seeded(seed+60);
         if(roll<0.12) return {status:"partial", pt:7, pc:8, pn:10, note:"360° partial · 3 traits skipped"};
         if(roll<0.18) return {status:"thin", pt:5, pc:6, pn:10, note:"Development Centre incomplete · half-day only"};
-        return {status:"complete", pt:10, pc:10, pn:10, note:"Full GLIDE assessment"};
+        return {status:"complete", pt:10, pc:10, pn:10, note:"Full LEAD assessment"};
       })()
     });
   }
@@ -3261,9 +3261,9 @@ function generateDemo(){
   const scoreOf = l => l.potentialScore*0.6 + l.fitToRole*0.4;
   const eligible = l => !(l.nineBoxRow === 2 && l.nineBoxCol <= 1); // exclude Under-performer + Effective floor
   const pools = {
-    LA: leaders.filter(l=>l.level==="LA" && eligible(l)).sort((a,b)=>scoreOf(b)-scoreOf(a)),
-    LB: leaders.filter(l=>l.level==="LB" && eligible(l)).sort((a,b)=>scoreOf(b)-scoreOf(a)),
-    LC: leaders.filter(l=>l.level==="LC" && eligible(l)).sort((a,b)=>scoreOf(b)-scoreOf(a))
+    L1: leaders.filter(l=>l.level==="L1" && eligible(l)).sort((a,b)=>scoreOf(b)-scoreOf(a)),
+    L2: leaders.filter(l=>l.level==="L2" && eligible(l)).sort((a,b)=>scoreOf(b)-scoreOf(a)),
+    L3: leaders.filter(l=>l.level==="L3" && eligible(l)).sort((a,b)=>scoreOf(b)-scoreOf(a))
   };
   const READY_NOW = READINESS[0], READY_1 = READINESS[1], READY_2 = READINESS[2], READY_4 = READINESS[3];
   // Target distribution for 100 roles:
@@ -3285,7 +3285,7 @@ function generateDemo(){
     else healthTargets[idx] = "exposed";
   });
   // Round-robin allocation per pool to spread names across roles
-  const cursor = {LA:0, LB:0, LC:0};
+  const cursor = {L1:0, L2:0, L3:0};
   const usedCount = {}; leaders.forEach(l=>usedCount[l.id]=0);
   const pickFromPool = (poolKey, avoid) => {
     const p = pools[poolKey]; if(!p.length) return null;
@@ -3310,7 +3310,7 @@ function generateDemo(){
     r.successors = [];
     const already = new Set();
     slotPlan.forEach(readiness=>{
-      const poolKeys = r.tier===1 ? ["LA","LB"] : r.tier===2 ? ["LA","LB","LC"] : ["LB","LC"];
+      const poolKeys = r.tier===1 ? ["L1","L2"] : r.tier===2 ? ["L1","L2","L3"] : ["L2","L3"];
       let picked = null;
       for(const pk of poolKeys){ picked = pickFromPool(pk, already); if(picked) break; }
       if(!picked) return;
@@ -3334,8 +3334,8 @@ function generateDemo(){
     if(best) l.readiness = best;
     else {
       // Not slated anywhere — assign a plausible readiness based on level
-      if(l.level==="LA") l.readiness = READY_1;
-      else if(l.level==="LB") l.readiness = READY_2;
+      if(l.level==="L1") l.readiness = READY_1;
+      else if(l.level==="L2") l.readiness = READY_2;
       else l.readiness = READY_4;
     }
   });
@@ -3350,7 +3350,7 @@ let STATE = {
   lfilters: {bu:[], level:[]},
   nbLevel: [], aiLevel: [], rdLevel: [], rdBU: [], rdFamily: [],
   piLevel: [], piBU: [],
-  piOverlays: {northpeakBench:true, indiaBench:false, LA:false, LB:false, LC:false, LD:false},
+  piOverlays: {northpeakBench:true, indiaBench:false, L1:false, L2:false, L3:false, L4:false},
   pipelineSort: "default",
   pipelineViewMode: "ninebox", // "ninebox" or "ai" — mini-matrix view on successor cards
 
@@ -4430,7 +4430,7 @@ function generateBoardPack(){
       <div class="vh">Pipeline is <b>${pct>=40?"strong":pct>=20?"healthy":pct>=10?"sub-optimal":"weak"}</b></div>
       <ul>
         <li><b>${pct}%</b> of critical roles have a Ready-Now successor</li>
-        <li><b>${roles.filter(r=>r.cl==="LA"&&(roleHealth(r)==="r"||roleHealth(r)==="o")).length}</b> LA Critical roles need immediate action</li>
+        <li><b>${roles.filter(r=>r.cl==="L1"&&(roleHealth(r)==="r"||roleHealth(r)==="o")).length}</b> L1 Critical roles need immediate action</li>
         <li><b>${flightRisk.length}</b> high flight-risk leaders on critical successor lists</li>
       </ul>
     </div>
@@ -4449,7 +4449,7 @@ function generateBoardPack(){
         <ul>
           ${ins.weakestBU?`<li><b>${ins.weakestBU.bu.replace("NorthPeak ","")}</b> — ${Math.round(100*ins.weakestBU.ratio)}% of ${ins.weakestBU.total} roles Red/Amber</li>`:""}
           ${ins.weakestFam?`<li><b>${ins.weakestFam.f}</b> — ${ins.weakestFam.weak}/${ins.weakestFam.total} roles need action</li>`:""}
-          ${ins.tier1Weak&&ins.tier1Weak.length?`<li><b>${ins.tier1Weak.length}</b> LA Critical roles at risk</li>`:""}
+          ${ins.tier1Weak&&ins.tier1Weak.length?`<li><b>${ins.tier1Weak.length}</b> L1 Critical roles at risk</li>`:""}
           <li><b>${flightRisk.length}</b> flight-risk on critical successors</li>
         </ul>
       </div>
@@ -4470,7 +4470,7 @@ function generateBoardPack(){
       ${topP.length?topP.map(l=>`<tr><td><b>${l.name}</b></td><td>${l.level}</td><td>${l.bu.replace("NorthPeak ","")} · ${l.function}</td><td>${l.age||"—"}</td><td><b>${l.potentialScore.toFixed(1)}</b></td></tr>`).join(""):`<tr><td colspan="5" style="text-align:center;color:#A0A0A0;font-style:italic">No Future Leaders identified in the current 9-box distribution — urgent action needed.</td></tr>`}
     </tbody></table>
 
-    <h2>Ready-Now successors for LA (Tier-1) roles</h2>
+    <h2>Ready-Now successors for L1 (Tier-1) roles</h2>
     <table><thead><tr><th>Name</th><th>Target role</th><th>BU · Function</th></tr></thead><tbody>
       ${rnLeaders.length?rnLeaders.map(x=>`<tr><td><b>${x.l.name}</b></td><td>${x.t}</td><td>${x.l.bu.replace("NorthPeak ","")} · ${x.l.function}</td></tr>`).join(""):`<tr><td colspan="3" style="text-align:center;color:#A0A0A0;font-style:italic">No Ready-Now successors identified for Tier-1 roles.</td></tr>`}
     </tbody></table>
@@ -4514,8 +4514,8 @@ function renderExecVerdict(){
                      : pct>=BENCH ? "at global benchmark of 20%"
                      : pct>=BENCH/2 ? "below global benchmark of 20%"
                      : "well below global benchmark of 20%";
-  // LA-level critical roles (Career Level LA) that are Red or Amber
-  const laCriticalWeak = roles.filter(r=>r.cl==="LA" && (roleHealth(r)==="r" || roleHealth(r)==="o")).length;
+  // L1-level critical roles (Career Level L1) that are Red or Amber
+  const laCriticalWeak = roles.filter(r=>r.cl==="L1" && (roleHealth(r)==="r" || roleHealth(r)==="o")).length;
   const highRiskCrit = (function(){
     const set = new Set();
     roles.filter(r=>r.tier<=2).forEach(r=>{(r.slots||[]).forEach(sl=>set.add(sl.leaderId))});
@@ -4536,7 +4536,7 @@ function renderExecVerdict(){
     <ul class="vk-bullets">
       <li onclick="switchView('succession')" title="Go to Pipeline"><span><b>${pct}%</b> of critical roles have a Ready-Now successor <span class="vk-bench">${benchClause}</span></span>${chev}</li>
       <li onclick="scrollToFutureLeaders()" title="See the Future Leaders"><span><b>${flCount}</b> Future Leaders identified — <b>${flPct}%</b> of the cohort <span class="vk-bench">${flComment}</span></span>${chev}</li>
-      <li onclick="drillLaCritical()" title="See the LA Critical roles at risk"><span><b>${laCriticalWeak}</b> LA Critical role${laCriticalWeak===1?"":"s"} need${laCriticalWeak===1?"s":""} immediate action</span>${chev}</li>
+      <li onclick="drillLaCritical()" title="See the L1 Critical roles at risk"><span><b>${laCriticalWeak}</b> L1 Critical role${laCriticalWeak===1?"":"s"} need${laCriticalWeak===1?"s":""} immediate action</span>${chev}</li>
       <li onclick="switchView('leaders')" title="Open Leaders — filter by flight risk"><span><b>${highRiskCrit}</b> high flight-risk leader${highRiskCrit===1?"":"s"} on critical successor lists</span>${chev}</li>
     </ul>
   `;
@@ -4554,15 +4554,15 @@ function scrollToFutureLeaders(){
     }
   }, 100);
 }
-// LA Critical drill — roles at Career Level LA with Red or Amber pipeline
+// L1 Critical drill — roles at Career Level L1 with Red or Amber pipeline
 function drillLaCritical(){
   STATE.roleHealthFilter = "all";
   STATE.roleSearchQuery = "";
   FAMILIES.forEach(f=>{ STATE.expandedFamilies[f] = true; });
   switchView("roles");
   setTimeout(()=>{
-    // Highlight LA-level roles that need action — scroll to first weak LA role
-    const weakLA = STATE.roles.find(r=>r.cl==="LA" && (roleHealth(r)==="r" || roleHealth(r)==="o"));
+    // Highlight L1-level roles that need action — scroll to first weak L1 role
+    const weakLA = STATE.roles.find(r=>r.cl==="L1" && (roleHealth(r)==="r" || roleHealth(r)==="o"));
     if(weakLA){ selectRole(weakLA.id); }
   }, 100);
 }
@@ -4602,7 +4602,7 @@ function renderExecFocusExec(){
     const names = ins.tier1Weak.slice(0,2).map(r=>r.title).join(", ");
     const more = ins.tier1Weak.length>2 ? ` +${ins.tier1Weak.length-2} more` : "";
     concerns.push({
-      text: `<b>${ins.tier1Weak.length}</b> LA Critical roles are exposed or at-risk — ${names}${more}.`,
+      text: `<b>${ins.tier1Weak.length}</b> L1 Critical roles are exposed or at-risk — ${names}${more}.`,
       pill: drillPill("Drill in", "drillTier1Weak()")
     });
   }
@@ -4975,16 +4975,16 @@ const INDIA_BENCHMARK = {
   Ambition:5.6, Power:5.2, Assertiveness:5.0, Liveliness:4.3, Composure:4.5,
   Positivity:5.3, Awareness:5.1, Cooperativeness:5.5, Sensitivity:4.8, Humility:5.0
 };
-const LEVEL_COLORS = {LA:"#0A3661", LB:"#2C7BE5", LC:"#F5A45A", LD:"#6BC9A6"};
+const LEVEL_COLORS = {L1:"#0A3661", L2:"#2C7BE5", L3:"#F5A45A", L4:"#6BC9A6"};
 function renderOverlayControls(){
   const c = document.getElementById("pi-overlay-controls"); if(!c) return;
   const overlays = [
     {k:"northpeakBench", label:"NorthPeak benchmark", color:"#6E6E6E"},
     {k:"indiaBench", label:"India benchmark", color:"#0A3661"},
-    {k:"LA", label:"LA cohort", color:LEVEL_COLORS.LA},
-    {k:"LB", label:"LB cohort", color:LEVEL_COLORS.LB},
-    {k:"LC", label:"LC cohort", color:LEVEL_COLORS.LC},
-    {k:"LD", label:"LD cohort", color:LEVEL_COLORS.LD}
+    {k:"L1", label:"L1 cohort", color:LEVEL_COLORS.L1},
+    {k:"L2", label:"L2 cohort", color:LEVEL_COLORS.L2},
+    {k:"L3", label:"L3 cohort", color:LEVEL_COLORS.L3},
+    {k:"L4", label:"L4 cohort", color:LEVEL_COLORS.L4}
   ];
   c.innerHTML = overlays.map(o=>{
     const on = !!STATE.piOverlays[o.k];
@@ -5362,8 +5362,8 @@ function renderTraitTrends(){
 
 // Insights generators — dynamic based on the actual data
 function generateLevelInsights(traits){
-  // Find traits where LA > LD by the largest margin (increasing with level)
-  // and traits where LD > LA (decreasing with level)
+  // Find traits where L1 > L4 by the largest margin (increasing with level)
+  // and traits where L4 > L1 (decreasing with level)
   const scores = {};
   LEVELS.forEach(lv=>{
     const ls = STATE.leaders.filter(l=>l.level===lv);
@@ -5373,14 +5373,14 @@ function generateLevelInsights(traits){
       scores[lv][t] = s.length? s.reduce((a,b)=>a+b,0)/s.length : 0;
     });
   });
-  const traitDeltas = traits.map(t=>({t, delta: scores.LA[t] - scores.LD[t], la:scores.LA[t], ld:scores.LD[t]}));
+  const traitDeltas = traits.map(t=>({t, delta: scores.L1[t] - scores.L4[t], la:scores.L1[t], ld:scores.L4[t]}));
   const risesWithLevel = traitDeltas.slice().sort((a,b)=>b.delta-a.delta).slice(0,2);
   const dropsWithLevel = traitDeltas.slice().sort((a,b)=>a.delta-b.delta).slice(0,2);
-  // Find LB dip on any trait
+  // Find L2 dip on any trait
   const insights = [];
-  insights.push(`<b>${risesWithLevel[0].t}</b> and <b>${risesWithLevel[1].t}</b> rise sharply from LD to LA (LA ${risesWithLevel[0].la.toFixed(1)} vs LD ${risesWithLevel[0].ld.toFixed(1)}) — the senior cohort is naturally selected for these; recruit and promote using these as anchor competencies.`);
-  insights.push(`<b>${dropsWithLevel[0].t}</b> declines as you go up in level (LA ${dropsWithLevel[0].la.toFixed(1)} vs LD ${dropsWithLevel[0].ld.toFixed(1)}) — a systemic gap at the top of the house that development spend should target.`);
-  insights.push(`LB cohort scores are consistently within ~0.2 of LA — the strategic bench is close-behind capability-wise, and can be moved into stretch Tier-1 seats with focused sponsorship.`);
+  insights.push(`<b>${risesWithLevel[0].t}</b> and <b>${risesWithLevel[1].t}</b> rise sharply from L4 to L1 (L1 ${risesWithLevel[0].la.toFixed(1)} vs L4 ${risesWithLevel[0].ld.toFixed(1)}) — the senior cohort is naturally selected for these; recruit and promote using these as anchor competencies.`);
+  insights.push(`<b>${dropsWithLevel[0].t}</b> declines as you go up in level (L1 ${dropsWithLevel[0].la.toFixed(1)} vs L4 ${dropsWithLevel[0].ld.toFixed(1)}) — a systemic gap at the top of the house that development spend should target.`);
+  insights.push(`L2 cohort scores are consistently within ~0.2 of L1 — the strategic bench is close-behind capability-wise, and can be moved into stretch Tier-1 seats with focused sponsorship.`);
   return insights;
 }
 function generateBUInsights(traits, activeBUs){
@@ -6004,7 +6004,7 @@ function renderSuccRoleTable(){
   let html = `<thead><tr>
     <th style="width:${roleColW}%">Critical role &middot; Incumbent</th>`;
   for(let i=1;i<=maxSlots;i++){
-    html += `<th style="width:${succW}%">Successor ${i}<span class="info-tip" style="margin-left:6px" tabindex="0" aria-label="What is Functional Fit?">i<span class="info-tip-body"><b>Functional Fit</b> (L / M / H) on each successor card is the line-leader assessment of how well the named successor matches this specific role's technical / functional requirements today. It combines with Leadership Potential (from GLIDE) to derive the readiness horizon — Ready Now, 1 yr, 2–3 yr, 4+ yr. Captured by the BU / Function Head in the Level&nbsp;1 review.</span></span></th>`;
+    html += `<th style="width:${succW}%">Successor ${i}<span class="info-tip" style="margin-left:6px" tabindex="0" aria-label="What is Functional Fit?">i<span class="info-tip-body"><b>Functional Fit</b> (L / M / H) on each successor card is the line-leader assessment of how well the named successor matches this specific role's technical / functional requirements today. It combines with Leadership Potential (from LEAD) to derive the readiness horizon — Ready Now, 1 yr, 2–3 yr, 4+ yr. Captured by the BU / Function Head in the Level&nbsp;1 review.</span></span></th>`;
   }
   html += `</tr></thead><tbody>`;
   let lastFamily = null;
@@ -6219,7 +6219,7 @@ function renderRoles(){
   // Sort within families
   const sortRoles = arr=>{
     const order = {g:0,a:1,o:2,r:3};
-    const clOrder = {LA:0,LB:1,LC:2,LD:3};
+    const clOrder = {L1:0,L2:1,L3:2,L4:3};
     if(STATE.roleSort==="health") return arr.sort((a,b)=>order[roleHealth(a)]-order[roleHealth(b)]);
     if(STATE.roleSort==="level") return arr.sort((a,b)=>clOrder[a.cl]-clOrder[b.cl]);
     return arr.sort((a,b)=>a.tier-b.tier);
@@ -6528,13 +6528,13 @@ function derivePMPHistory(leader){
 //   - the "so what" for development / role fit
 const TRAIT_STRENGTH_NARRATIVE = {
   "Transformative Execution":"Consistently anchors ambiguous mandates to a sequenced delivery plan. In the DC strategy exercise, translated an open-ended plant-expansion brief into stage-gated milestones with clear ownership — the panel noted this was one of the sharpest execution instincts of the day. This is exactly the muscle NorthPeak needs on Chennai, Pune and the international portfolio, where multi-year contracts live or die on structured follow-through.",
-  "People Leadership":"Genuinely invests in team development — adapts coaching tone to the individual, draws people out rather than diagnosing at them. In the role-play, shifted from directive to enquiring mid-conversation once the coachee's real concern surfaced. This is a real asset for the 2030 workforce plan, where scaling talent depth (particularly at LC / LD) requires leaders who develop others rather than just deliver through them.",
+  "People Leadership":"Genuinely invests in team development — adapts coaching tone to the individual, draws people out rather than diagnosing at them. In the role-play, shifted from directive to enquiring mid-conversation once the coachee's real concern surfaced. This is a real asset for the 2030 workforce plan, where scaling talent depth (particularly at L3 / L4) requires leaders who develop others rather than just deliver through them.",
   "Collaborative Leadership":"Builds alignment across function heads without diluting the point of view. In the cross-BU simulation, absorbed challenge from Auto Components and Industrial Systems peers, restated their concerns accurately, and moved to a shared position — the marker of collaborative rather than merely consultative leadership. Anchors well in the Auto Components × Industrial Systems × Consumer Durables synergy agenda and in JV settings where multiple principals must land in the same place.",
   "Resilience":"Composed under sustained pressure — decision quality holds as the situation intensifies. In the DC crisis scenario, re-anchored the team on facts when the room was becoming emotional, without dampening urgency. This is the trait that carries leaders through regulatory shocks, long-gestation project delays, and the multi-decade capital-asset lifecycle NorthPeak operates in.",
   "Adaptability":"Genuinely re-thinks position when new information changes the picture — not defensive of the original plan. Pivoted approach mid-exercise when the panel introduced a policy-shift twist, without either capitulating or over-anchoring on the initial view. A material asset for the energy transition + digital transformation agenda, where the operating environment is genuinely fluid.",
   "Entrepreneurial":"Frames growth opportunities as calibrated bets — stages exposure, holds optionality open. In the new-vertical exercise, sequenced the go/no-go into 3-, 6-, and 12-month decision points rather than a single binary choice. This is the growth stance NorthPeak needs on international manufacturing, sustainable products, and any adjacent-market entry where the pattern is real but the size of the prize is still forming.",
   "Learning Agility":"Updates the mental model in real time. Asked substantive, non-defensive questions throughout the panel and integrated new inputs into subsequent answers — visible evidence of a curious rather than performing stance. Central to the AI / digital transformation agenda, where the leaders who compound over the next 3 years will be the ones who can genuinely learn new operating models rather than adapting old ones.",
-  "Cultural Synergy":"Reads and adapts across cultural contexts with visible ease. In peer feedback, described as a leader who can move between the international portfolio (Cebu, Crete, Medan) and Indian operations without missing the local social code. This is a real edge on NorthPeak's international expansion arc, where technical excellence alone doesn't unlock JV / regulatory / partner trust.",
+  "Cultural Synergy":"Reads and adapts across cultural contexts with visible ease. In peer feedback, described as a leader who can move between the international portfolio (Monterrey, Brno, Hanoi) and Indian operations without missing the local social code. This is a real edge on NorthPeak's international expansion arc, where technical excellence alone doesn't unlock JV / regulatory / partner trust.",
   "Trust & Loyalty":"Rated highly across 360° raters for integrity and reliability — 'does what she says' is a recurring peer verbatim. Anchors particularly well in government / regulator relationships and family-business governance settings, where long-run trust compounds and cannot be manufactured on demand.",
   "Energy & Tenacity":"Sustained energy that outlasts the initial excitement of a project. Peer raters flagged 'still pushing at month 18' as characteristic — precisely the stamina profile that carries long-gestation infra work through the trough."
 };
@@ -6546,7 +6546,7 @@ const TRAIT_DEVELOPMENT_NARRATIVE = {
   "Adaptability":"Anchored heavily on the initial plan and had to be prompted twice to reconsider even after new information landed. In an energy-transition or digital-disruption context, this becomes a genuine liability — the leader who can't re-set is the leader who executes yesterday's plan into today's market. Rotational exposure to a fast-moving business (Innovation Labs, digital, or a startup partnership) is the highest-leverage development.",
   "Entrepreneurial":"Frames the new-vertical question conservatively — risk instinct is muted, protective of the base business. In the exercise, defaulted to 'let's pilot first' when the room was already at the pilot stage. Not disqualifying for operational scale-up roles, but a real ceiling for any growth-charter role (international expansion, new energy, adjacent markets). A structured intrapreneurship programme + P&L accountability on a new business unit is the development path.",
   "Learning Agility":"Deflected panel challenge with prepared views rather than genuinely re-thinking the position. This is the trait most correlated with 'plateau at the next stretch' in Aon's global benchmark — a leader who can't learn a new operating model gets left behind by the very transformation they're meant to lead. External board exposure + a structured AI / digital immersion (3–6 months) is the fastest re-set.",
-  "Cultural Synergy":"Reads mono-culturally in international / cross-BU exercises — misses second-order cues, defaults to India-context assumptions. For any role that touches the international portfolio (Cebu, Crete, Medan) or cross-BU alliances, this becomes a real barrier. A 12-month international assignment or JV-lead exposure is the material development.",
+  "Cultural Synergy":"Reads mono-culturally in international / cross-BU exercises — misses second-order cues, defaults to India-context assumptions. For any role that touches the international portfolio (Monterrey, Brno, Hanoi) or cross-BU alliances, this becomes a real barrier. A 12-month international assignment or JV-lead exposure is the material development.",
   "Trust & Loyalty":"360° raters flagged 'says different things to different audiences' as a mid-cycle concern. This is manageable at a single-BU level but becomes a Group-level integrity issue at CXO scale. Structured stakeholder-management coaching + a visible enterprise-wide project where consistency is publicly observed is the corrective path.",
   "Energy & Tenacity":"Peer raters describe an 'early sprint, mid-project fade' pattern. For long-gestation infra work, this pattern doesn't clear the bar. A stretch on a 24-month milestone-heavy programme with visible checkpoint accountability is the development frame."
 };
@@ -6568,7 +6568,7 @@ const DERAILER_NARRATIVE = {
   "Sensitivity":"Blunt / stoic tone. Weaker emotional connection with teams — will show up as engagement and retention issues over time.",
   "Humility":"Ego-driven style. Erodes trust over time; undermines collaborative governance and family-business fit."
 };
-// Strengths / Development / Derailers from GLIDE PT traits (non-BL) + ADEPT-15 low dimensions
+// Strengths / Development / Derailers from LEAD PT traits (non-BL) + ADEPT-15 low dimensions
 function deriveStrengthsGapsDerailers(leader){
   const ptTraits = TRAITS.filter(t => !BUSINESS_LEVERS.includes(t))
     .map(t => ({trait: t, pt: leader.traits[t].PT, pc: leader.traits[t].PC}))
@@ -6694,7 +6694,7 @@ function renderLeaderProfile(lid){
   const persona = derivePersona(l);
   // 3-year PMP history (anchored to nineBoxCol; synthesised for illustrative cohort)
   const pmpHist = derivePMPHistory(l);
-  // Strengths / Development / Derailers (from GLIDE PT + ADEPT-15 low dimensions)
+  // Strengths / Development / Derailers (from LEAD PT + ADEPT-15 low dimensions)
   const sgd = deriveStrengthsGapsDerailers(l);
   // Sector — infer from BU (NorthPeak-specific mapping)
   const sectorMap = {
@@ -6764,7 +6764,7 @@ function renderLeaderProfile(lid){
       <div class="gl-sub-row">
         <div class="gl-sub-lbl">
           <span class="gl-sub-tag pt">Potential</span>
-          <span class="gl-sub-weight">70% weight · GLIDE Development Centre</span>
+          <span class="gl-sub-weight">70% weight · LEAD Development Centre</span>
         </div>
         ${bar(pot)}
       </div>
@@ -6995,14 +6995,14 @@ function renderLeaderProfile(lid){
 
       <div class="lp-sgd two-col">
         <div class="lp-sgd-card strength">
-          <div class="sgd-hd">Areas of Strength <span style="margin-left:auto;font-size:9px;color:var(--ink-4);letter-spacing:0;text-transform:none;font-weight:500">Top 3 traits from GLIDE</span></div>
+          <div class="sgd-hd">Areas of Strength <span style="margin-left:auto;font-size:9px;color:var(--ink-4);letter-spacing:0;text-transform:none;font-weight:500">Top 3 traits from LEAD</span></div>
           ${sgd.strengths.map(s => `<div class="lp-sgd-item detailed">
             <div class="sgd-name">${s.trait}<span class="sgd-score">${s.pt.toFixed(1)}/5</span></div>
             <div class="sgd-narrative">${TRAIT_STRENGTH_NARRATIVE[s.trait] || `Notable observed strength in ${s.trait} across the Development Centre. ${TRAIT_STRATEGIC_ANCHOR[s.trait] ? "Anchors well in " + TRAIT_STRATEGIC_ANCHOR[s.trait].toLowerCase() + "." : ""}`}</div>
           </div>`).join("")}
         </div>
         <div class="lp-sgd-card develop">
-          <div class="sgd-hd">Areas of Development <span style="margin-left:auto;font-size:9px;color:var(--ink-4);letter-spacing:0;text-transform:none;font-weight:500">Bottom 2 traits from GLIDE</span></div>
+          <div class="sgd-hd">Areas of Development <span style="margin-left:auto;font-size:9px;color:var(--ink-4);letter-spacing:0;text-transform:none;font-weight:500">Bottom 2 traits from LEAD</span></div>
           ${sgd.development.map(d => `<div class="lp-sgd-item detailed">
             <div class="sgd-name">${d.trait}<span class="sgd-score">${d.pt.toFixed(1)}/5</span></div>
             <div class="sgd-narrative">${TRAIT_DEVELOPMENT_NARRATIVE[d.trait] || `Gap observed in ${d.trait} at the Development Centre. Recommended focus area for the next 12–18 months.`}</div>
@@ -7011,7 +7011,7 @@ function renderLeaderProfile(lid){
       </div>
       </div><!-- /lp-panel-overview -->
 
-      <!-- ASSESSMENT PANEL: Scores, GLIDE traits, Rater breakdown, Derailers -->
+      <!-- ASSESSMENT PANEL: Scores, LEAD traits, Rater breakdown, Derailers -->
       <div class="lp-panel" id="lp-panel-assessment">
         <div class="scores-grid">
           <div class="score-tile ${scoreCls(l.potentialScore)}">
@@ -7029,14 +7029,14 @@ function renderLeaderProfile(lid){
         </div>
 
         <div class="lp-assessment-block">
-          <h4 class="lp-block-hd">GLIDE profile — 10 traits · aggregate score (70% Potential + 30% Perception)</h4>
+          <h4 class="lp-block-hd">LEAD profile — 10 traits · aggregate score (70% Potential + 30% Perception)</h4>
           <div class="gl-hd">
             <div class="gl-hd-name">Trait</div>
             <div class="gl-hd-bar">Aggregate score <span class="gl-hd-note">tap row to see Potential + Perception breakdown</span></div>
           </div>
           ${TRAITS.map((t,i)=>traitRow(t,i)).join("")}
           <div class="muted" style="margin-top:12px;font-size:11px;color:var(--ink-3);line-height:1.5">
-            <b>How the aggregate is computed:</b> For the 7 leadership traits assessed at the Development Centre, aggregate = 70% Potential (DC) + 30% Perception (360° Model 2). For the 3 Business Levers (Cultural Synergy, Trust &amp; Loyalty, Energy &amp; Tenacity), aggregate = 100% Perception — these are assessed via 360° only, per the GLIDE framework. Model 2 Perception = 0.5 · Manager + 0.5 · average of other rater categories available (Direct Reports, Peers, Others). Personality (ADEPT-15) is used as background input to Potential and appears in the Watch-outs card below.
+            <b>How the aggregate is computed:</b> For the 7 leadership traits assessed at the Development Centre, aggregate = 70% Potential (DC) + 30% Perception (360° Model 2). For the 3 Business Levers (Cultural Synergy, Trust &amp; Loyalty, Energy &amp; Tenacity), aggregate = 100% Perception — these are assessed via 360° only, per the LEAD framework. Model 2 Perception = 0.5 · Manager + 0.5 · average of other rater categories available (Direct Reports, Peers, Others). Personality (ADEPT-15) is used as background input to Potential and appears in the Watch-outs card below.
           </div>
         </div>
 
@@ -7816,7 +7816,7 @@ function renderCompareSlot(idx, l){
         <div style="margin-bottom:12px;color:var(--ink-3);font-size:12px">Slot ${idx+1} — empty</div>
         <div class="cmp-typeahead-wrap">
           <input type="text" class="cmp-typeahead-input" id="cmp-input-${idx}"
-                 placeholder="Type name, role, BU, function, or level (LA/LB/LC/LD)…"
+                 placeholder="Type name, role, BU, function, or level (L1/L2/L3/L4)…"
                  oninput="filterCompareLeaders(${idx}, this.value)"
                  onfocus="filterCompareLeaders(${idx}, this.value)"
                  onblur="closeCompareSuggestions(${idx})"
@@ -7885,7 +7885,7 @@ function renderCompareSlot(idx, l){
       <div class="cmp-row"><div class="k">AI readiness</div><div class="v">CR: ${["Low","Med","High"][l.changeReadiness-1]} · Use: ${["Low","Med","High"][l.aiUse-1]}</div></div>
       <div class="cmp-row"><div class="k">Target role</div><div class="v" style="font-size:12px">${l.aspiration}</div></div>
 
-      <div style="margin-top:16px;font-size:10px;text-transform:uppercase;color:var(--ink-3);font-weight:600;letter-spacing:.06em">GLIDE — Potential (PT)</div>
+      <div style="margin-top:16px;font-size:10px;text-transform:uppercase;color:var(--ink-3);font-weight:600;letter-spacing:.06em">LEAD — Potential (PT)</div>
       <div style="margin-top:6px">${ptTraits.map(traitBar).join("")}</div>
     </div>
   </div>`;
@@ -7995,9 +7995,9 @@ function downloadTemplate(){
     [""],
     ["• LeaderID and RoleID must be unique within each sheet."],
     ["• LeaderID and RoleID are the join keys — the Successors sheet references both."],
-    ["• GLIDE trait scores are on a 1.0–5.0 scale (one decimal)."],
+    ["• LEAD trait scores are on a 1.0–5.0 scale (one decimal)."],
     ["• ADEPT-15 personality scores are on a 1.0–9.0 Sten scale (one decimal)."],
-    ["• Business Lever traits (Cultural Synergy · Trust & Loyalty · Energy & Tenacity) have Personality (PN) + Perception (PC) scores only — no Potential (PT), per the GLIDE framework."],
+    ["• Business Lever traits (Cultural Synergy · Trust & Loyalty · Energy & Tenacity) have Personality (PN) + Perception (PC) scores only — no Potential (PT), per the LEAD framework."],
     ["• Leave any cell blank if data is not available — the tool handles missing data gracefully."],
     ["• Use the exact strings shown in the Reference sheet for enum fields (NineBox, Readiness, Level, etc.). Values that don't match will fall back to defaults."],
     [""],
@@ -8038,7 +8038,7 @@ function downloadTemplate(){
     // AI Readiness (supplementary — optional)
     "ChangeReadiness_1to3","AIUse_1to3"
   ];
-  // GLIDE 10 traits × 3 lenses (2 for Business Levers)
+  // LEAD 10 traits × 3 lenses (2 for Business Levers)
   TRAITS.forEach(t=>{
     const key = t.replace(/\s+/g,"_").replace(/&/g,"and").replace(/[^a-zA-Z_]/g,"");
     leaderCols.push(key+"_PN", key+"_PC");
@@ -8141,7 +8141,7 @@ function downloadTemplate(){
   // ---------- 5 · Reference sheet (read-only) ----------
   const reference = [
     ["Field","Allowed values (use these exact strings)"],
-    ["Level (career level)", "LA · LB · LC · LD"],
+    ["Level (career level)", "L1 · L2 · L3 · L4"],
     ["Gender", "M · F"],
     ["Performance", "Exceeds Expectations · Strong Performance · Meets Expectations · Below Expectations · Underperforms"],
     ["NineBox", NINEBOX_ZONES.flat().join(" · ")],
@@ -8164,11 +8164,11 @@ function downloadTemplate(){
     ["FunctionalFitForThisRole", "Low · Med · High · captured live in Level 1 review by BU / Functional head"],
     [""],
     ["PERCEPTION BY RATER SHEET FIELDS",""],
-    ["Manager / Peer / DirectReports", "GLIDE trait score per rater group (1.0–5.0) · powers the expandable rater breakdown on Leader Profile"],
+    ["Manager / Peer / DirectReports", "LEAD trait score per rater group (1.0–5.0) · powers the expandable rater breakdown on Leader Profile"],
     [""],
     ["ORIGINAL ROLES SHEET FIELDS (below)",""],
     ["Tier", "1 (Enterprise-critical) · 2 (BU / Function-critical) · 3 (Specialist-critical)"],
-    ["CL (role's career level)", "LA · LB · LC · LD"],
+    ["CL (role's career level)", "L1 · L2 · L3 · L4"],
     ["Family (job family)", FAMILIES.join(" · ")],
     ["BU", BUs.join(" · ")],
     ["Function", FUNCTIONS.join(" · ")],
@@ -8177,7 +8177,7 @@ function downloadTemplate(){
     ["BusinessContext", "Free text — one paragraph explaining why this role is critical (max 300 chars)"],
     [""],
     ["SCORE SCALES",""],
-    ["GLIDE Trait Score (all PN / PC / PT)", "1.0 – 5.0 (one decimal)"],
+    ["LEAD Trait Score (all PN / PC / PT)", "1.0 – 5.0 (one decimal)"],
     ["ADEPT-15 Personality Score", "1.0 – 9.0 (Sten scale, one decimal)"],
     [""],
     ["TRAIT STRUCTURE","(10 traits total)"],
@@ -8215,7 +8215,7 @@ function handleFile(file){
 
       // Parse leaders
       const leaders = rows.map(row=>{
-        // GLIDE traits
+        // LEAD traits
         const traits = {};
         TRAITS.forEach(t=>{
           const key = t.replace(/\s+/g,"_").replace(/&/g,"and").replace(/[^a-zA-Z_]/g,"");
@@ -8254,13 +8254,13 @@ function handleFile(file){
         }, 0);
         const dqPct = completedLenses/totalLenses;
         const dqStatus = dqPct>=0.9 ? "complete" : dqPct>=0.6 ? "partial" : "thin";
-        const dqNote = dqStatus==="complete" ? "Full GLIDE assessment"
+        const dqNote = dqStatus==="complete" ? "Full LEAD assessment"
                        : dqStatus==="partial" ? `${completedLenses}/${totalLenses} trait scores present`
                        : `${completedLenses}/${totalLenses} — assessment incomplete`;
         return {
           id: String(row.LeaderID||""), name: row.Name||"",
           role: row.CurrentRole||"", bu: row.BU||"", function: row.Function||"",
-          level: row.Level||"LC", country: row.Country||"India", gender: row.Gender||"M",
+          level: row.Level||"L3", country: row.Country||"India", gender: row.Gender||"M",
           tenure, manager: row.Manager||"",
           performance: row.Performance||"", nineBox: row.NineBox||"Core employee",
           nineBoxRow, nineBoxCol, readiness: row.Readiness||READINESS[2],
@@ -8289,7 +8289,7 @@ function handleFile(file){
           id: String(r.RoleID||""), title: r.Title||"",
           family: r.Family||"Enterprise Executive",
           tier: parseInt(r.Tier)||1,
-          cl: String(r.CL||"LB"), bu: r.BU||"", incumbent: r.Incumbent||"—",
+          cl: String(r.CL||"L2"), bu: r.BU||"", incumbent: r.Incumbent||"—",
           lastReviewed: r.LastReviewed||"",
           businessContext: r.BusinessContext||"",
           successors: [],
@@ -8452,7 +8452,7 @@ document.addEventListener("keydown", e => {
         <div class="lbl">Layer 3</div>
         <div class="name">Individual Leader profile</div>
         <div class="row"><span class="k">Audience</span><span>Executive coach, HRBP, or a Board member wanting depth on one person.</span></div>
-        <div class="row"><span class="k">Key thing</span><span>GLIDE trait bars across three lenses + 360 rater breakdown + ADEPT + coach summary + notes.</span></div>
+        <div class="row"><span class="k">Key thing</span><span>LEAD trait bars across three lenses + 360 rater breakdown + ADEPT + coach summary + notes.</span></div>
         <div class="row"><span class="k">Say</span><span>“Depth exists. Don't walk every field — point out the coach summary and move on.”</span></div>
       </div>
     </div>
